@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<script src="registerValidation.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>geek Software Shop</title>
+<link href="styles.css" rel="stylesheet" type="text/css" />
+<script src="registerValidation.js"></script>
+</head>
+<body>
+<!-- begin #container -->
+<div id="container">
+	<!-- begin #header -->
+    <div id="header">
+    	<div class="logo" align="center"><a href=""> <img src="images/logo.png" alt="" /></a></div>
+        <div class="menuContainer">
+            <div class="menu">
+                <ul>
+                    <li ><a href="index.html">HOME</a></li>
+                     <li  id="active"><a href="login.html">LOGIN</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="location.html">LOCATION</a></li>
+                </ul>
+            </div>
+                <ul class="icons">
+                    <li><a href=""><img src="images/twitter.png" alt="" /></a></li>
+                    <li><a href=""><img src="images/facebook.png" alt="" /></a></li>
+                    <li><a href=""><img src="images/flickr.png" alt="" /></a></li>
+                    <li><a href=""><img src="images/stumble.png" alt="" /></a></li>
+                </ul>
+            <div class="clearfloat"></div>
+        </div>
+        <div class="clearfloat"></div>
+        
+        
+        <div class="loginDiv" align="center">
+        	<form name="register" action="register.php" method="post" onsubmit="return showUser();" >
+        		
+        		<table cellspacing="30">
+        			<tr>	
+        				<td>
+        					Username:
+        				</td>
+        				<td>
+        					<input type="text" id="username" name="username"  > <div class="errorDiv" id="usernameError"></div>
+        				</td>
+        				
+        			</tr>
+        			<tr>
+        				<td>
+        					Password:
+        				</td>
+        				<td>
+        					<input type="password" id="password" name="password" required> <div class="errorDiv" id="passwordError"></div>
+        				</td>
+
+        			</tr>
+        			<tr>
+        				<td>
+        					Confirm Password:
+        				</td>
+        				<td>
+        					<input type="password" id="confirmPassword" name="confirmPassword" required> <div class="errorDiv" id="confirmPasswordError"></div>
+        				</td>
+
+        			</tr>
+        			
+        			<tr>
+        				<td>
+        					First Name:
+        				</td>
+        				<td>
+        					<input type="text"  name="firstName" id="FirstName" ><div class="errorDiv" id="FirstNameError"></div>
+        				</td>
+        				
+        			</tr>
+        			<tr>
+        				<td>
+        					Last Name:
+        				</td>
+        				<td>
+        					<input type="text" name="lastName" id="LastName"><div class="errorDiv" id="LastNameError"></div>
+        				</td>
+        			</tr>
+        			<tr>
+        				<td>
+        					Email Id:
+        				</td>
+        				<td>
+        					<input type="email" name="emailId" id="emailId" required="required"><div class="errorDiv" id="emailIdError"></div>
+        				</td>
+        			</tr>
+        			
+        			<tr>
+        				<td>
+        					Address
+        				</td>
+        				<td>
+        					<textarea name="address" id="Address" rows="4" cols="22"></textarea><div class="errorDiv" id="AddressError"></div>
+        				</td>
+        			</tr>
+        			<tr>
+        				<td>
+        					State:
+        				</td>
+        				<td>
+        					<input type="text" name="state" id="state"><div class="errorDiv" id="stateError"></div>
+        				</td>
+        			</tr>
+        			<tr>
+        				<td>
+        					City
+        				</td>
+        				<td>
+        					<input type="text" name="city" id="city" ><div class="errorDiv" id="cityError"></div>
+        				</td>
+        			</tr>
+        			<tr>
+        				<td>
+        					Zipcode:
+        				</td>
+        				<td>
+        					<input type="text" name="zipcode" id="zipcode" ><div class="errorDiv" id="ZipcodeError"></div>
+        				</td>
+        			</tr>
+        			<tr>
+        				<td>
+        					Phone:
+        				</td>
+        				<td>
+        					<input type="text" name="phone" id="phone"><div class="errorDiv" id="phoneError" ></div>
+        				</td>
+        			</tr>
+        			
+        		</table>
+        		
+        				<input type="submit" name="submitRegister" value="SUBMIT" id="button"  /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		       			<input type="reset" value="RESET" id="button"/></td>
+	        	
+	        	</table>
+        		
+        	</form>
+        	
+        </div>
+        
+    </div>
+    
+   
+    <!-- end #header -->
+    
+    
+    <!-- end #mainContent -->
+    <!-- This clearing element should immediately follow the #mainContent div in order to/ force the #container div to contain all child floats --><br class="clearfloat" />
+    <!-- begin #footer -->
+    <div id="footer">
+		<p>
+        	Terms of Use | <a title="This page validates as XHTML 1.0 Strict" href="http://validator.w3.org/check/referer" class="footerLink"><abbr title="eXtensible HyperText Markup Language">XHTML</abbr></a> | 
+			Designed by Sankar, Santhosh and Rukmini            
+        </p>
+	</div>
+    <!-- end #footer -->
+</div>
+<!-- end #container -->
+</body>
+
+</html>

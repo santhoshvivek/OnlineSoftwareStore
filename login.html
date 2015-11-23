@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>geek Software Shop</title>
+<link href="styles.css" rel="stylesheet" type="text/css" />
+
+<script>
+	function showUser() 
+	{
+		
+		var username = document.getElementById("username").value;
+		var password = document.getElementById("password").value;
+	  if (username=="")
+	  {
+	    document.getElementById("txtHint").innerHTML="Please enter username and password";
+	    
+	  } 
+	  else if(password=="")
+	  {
+	  	document.getElementById("txtHint").innerHTML="Please enter password";
+	    
+	  }
+	  else
+	  {
+	  	
+	    if (window.XMLHttpRequest) {
+	    // code for IE7+, Firefox, Chrome, Opera, Safari
+	    xmlhttp=new XMLHttpRequest();
+	  } else { // code for IE6, IE5
+	    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	  }
+	  xmlhttp.onreadystatechange=function() {
+	    if (xmlhttp.readyState==4 && xmlhttp.status==200) 
+	    {
+	      document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+	    }
+	  }
+	  xmlhttp.open("POST","login.php?username="+username+"&password="+password,true);
+	  xmlhttp.send();
+	  }
+	}
+</script>
+</head>
+<body>
+<!-- begin #container -->
+<div id="container">
+	<!-- begin #header -->
+    <div id="header">
+    	<div class="logo" align="center"><a href=""><img src="images/logo.png" alt="" /></a></div>
+        <div class="menuContainer">
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                     <li  id="active"><a href="login.html">LOGIN</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="location.html">LOCATION</a></li>
+                </ul>
+            </div>
+                <ul class="icons">
+                    <li><a href=""><img src="images/twitter.png" alt="" /></a></li>
+                    <li><a href=""><img src="images/facebook.png" alt="" /></a></li>
+                    <li><a href=""><img src="images/flickr.png" alt="" /></a></li>
+                    <li><a href=""><img src="images/stumble.png" alt="" /></a></li>
+                </ul>
+            <div class="clearfloat"></div>
+        </div>
+        <div class="clearfloat"></div>
+        
+        
+        <div class="loginDiv" align="center">
+        	<form name="login" method="post">
+        		
+        		<table cellspacing="50">
+        			<tr>
+        				<td>
+        					Username:
+        				</td>
+        				<td>
+        					<input type="text"  name="username" id="username">
+        				</td>
+        				
+        			</tr>
+        			<tr>
+        				<td>
+        					Password:
+        				</td>
+        				<td>
+        					<input type="password" name="password" id="password" >
+        				</td>
+        			</tr>
+        			
+        			<div id="txtHint"> </div>
+        		</table>
+        		
+        			<div id="divider"><input type="button" name="submit" value="Login" id="button" onclick="showUser()">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="reset" name="reset" value="Reset" id="button"></div>
+        		
+        		<table>
+        			<tr><td></td></tr>
+        		</table>
+        		<br><br>
+        		
+        		<br /><br />
+        		
+        	</form>
+        	
+        </div>
+        
+    </div>
+    
+    <div class="registerDiv" align="center">
+    	 New User? Please <a href="register.html">register</a> yourself!!
+    </div>
+    <!-- end #header -->
+    
+    
+    <!-- end #mainContent -->
+    <!-- This clearing element should immediately follow the #mainContent div in order to force the #container div to contain all child floats --><br class="clearfloat" />
+    <!-- begin #footer -->
+    <div id="footer">
+		<p>
+        	Terms of Use | <a title="This page validates as XHTML 1.0 Strict" href="http://validator.w3.org/check/referer" class="footerLink"><abbr title="eXtensible HyperText Markup Language">XHTML</abbr></a> | 
+        <a title="This page validates as CSS" href="http://jigsaw.w3.org/css-validator/check/referer" class="footerLink"><abbr title="Cascading Style Sheets">CSS</abbr></a>  |  Copyright &copy; Computer Store. Design by <a href="http://www.facebookpagetemplates.com">Free Facebook Templates</a>
+        </p>
+	</div>
+    <!-- end #footer -->
+</div>
+<!-- end #container -->
+</body>
+</html>

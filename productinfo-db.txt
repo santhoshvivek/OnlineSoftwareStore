@@ -1,0 +1,19 @@
+INSERT INTO ProductInfo VALUES('11','Adobe Flux',23,'app','Adobe','2004','','Apache Flex, formerly Adobe Flex, is a software development kit (SDK) for the development and deployment of cross-platform rich Internet applications based on the Adobe Flash platform. Initially developed by Macromedia and then acquired by Adobe Systems, Flex was donated by Adobe to the Apache Software Foundation in 2011[2] and promoted to a top-level project in December 2012.',4)
+
+INSERT INTO ProductInfo VALUES('12','Adobe Photoshop',50,'app','Adobe','2004','','Adobe Photoshop is a raster graphics editor developed and published by Adobe Systems for Windows and OS X.
+Photoshop was created in 1988 by Thomas and John Knoll. Since then, it has become the de facto industry standard in raster graphics editing, such that the word "photoshop" has become a verb as in "to photoshop an image," "photoshopping," and "photoshop contest," etc.',2);
+
+INSERT INTO ProductInfo VALUES('13','Microsoft Word',100,'app','Microsoft','2013','','A full-featured word processing program for Windows and Mac OS X from Microsoft. Available stand-alone or as part of the Microsoft Office suite, Word contains rudimentary desktop publishing capabilities and is the most widely used word processing program on the market. Word files are commonly used as the format for sending text documents via e-mail because almost every user with a computer can read a Word document by using the Word application, a Word viewer or a word processor that imports the Word format',5)
+
+INSERT INTO ProductInfo VALUES('21','Microsoft Windows 8',76,'sys','Microsoft','2012','','Windows 8 is a personal computer operating system developed by Microsoft as part of the Windows NT family of operating systems. Development of Windows 8 started before the release of its predecessor, Windows 7, in 2009. It was announced at CES 2011, and followed by the release of three pre-release versions from September 2011 to May 2012. The operating system was released to manufacturing on August 1, 2012, and was released for general availability on October 26, 2012',5);
+
+INSERT INTO ProductInfo VALUES('22','RedHat Server',43,'sys','RedHat','2009','','Red Hat Enterprise Linux OpenStack Platform delivers an integrated foundation to create, deploy, and scale a secure and reliable public or private OpenStack cloud. Red Hat Enterprise Linux OpenStack Platform combines the world’s leading enterprise Linux and the fastest-growing cloud infrastructure platform to give you the agility to scale and quickly meet customer demands without compromising on availability, security, or performance',3);
+
+
+INSERT INTO ProductInfo VALUES('23','HP UX server',89,'sys','HP','2003','','HP-UX (Hewlett-Packard UniX) is Hewlett-Packards proprietary implementation of the Unix operating system, based on UNIX System V (initially System III) and first released in 1984. Recent versions support the HP 9000 series of computer systems, based on the PA-RISC processor architecture, and HP Integrity systems, based on Intels Itanium architecture.',1);
+
+INSERT INTO ProductInfo VALUES('31','Dreamweaver',140,'dev','Adobe','2008','','Adobe Dreamweaver is a proprietary web development tool developed by Adobe Systems. Dreamweaver was created by Macromedia in 1997,[1] and was maintained by them until Macromedia was acquired by Adobe Systems in 2005. Adobe Dreamweaver is available for OS X and for Windows.',1);
+
+
+INSERT INTO ProductInfo VALUES('32','Visual Studio',120,'dev','Microsoft','2004','','Visual Studio is a suite of component-based software development tools and other technologies for building powerful, high-performance applications.',5);
+

@@ -1,0 +1,375 @@
+* {
+	margin:0;
+	padding:0;
+}
+body  {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	background:#ffffff;
+	color:#4a4a4a;
+}
+a {
+	color:#6fbc18;
+	text-decoration:underline;
+}
+a:hover {
+	color:#6fbc18;
+	text-decoration:none;
+}
+img {
+	border:0;
+}
+h1 {
+	color:#6fbc18;	
+	font-size:24px;
+	font-weight:bold;
+	padding:0 0 20px 0;
+}
+#container { 
+	width: 980px;  
+	margin: 0 auto;
+}
+.logo {
+	padding:40px 0;
+}
+.icons {
+	padding:5px 5px 3px 5px;
+	background:#FFFFFF;
+	float:right;
+	margin:15px;
+} 
+.icons li {
+	display:inline;
+	list-style:none;
+}
+.slogan {
+	font-size:24px;
+	color:#FFFFFF;
+	margin-left:200px;
+	margin-right:300px;
+	padding-top:30px;
+}
+#header .headerPic {
+	
+	width:980px;
+	height:420px; 
+}
+.headerText1 {
+	font-size:48px;
+	color:#ffffff;
+	padding:100px 0 0 90px;
+}
+.headerText2 {
+	font-size:24px;
+	padding:10px 0 0 90px;
+}
+.buttonHeader {
+	background:#ffa800;
+	border:0;
+	font-weight:bold;
+	color:#FFFFFF;
+	padding:5px 10px;
+	cursor:pointer;
+	margin:30px 0 0 90px;
+}
+.menuContainer {
+	background:#484848;
+}
+.menu {
+	float:left;
+	padding:20px 0 0 0;
+	margin:0 0 20px 0;
+}
+.menu ul {
+	padding:0px 0 0 0;
+}
+.menu li {
+	list-style:none;
+	display:inline;
+	padding: 0 15px;
+} 
+.menu li a {
+	text-decoration:none;
+	color:#ffffff;
+	font-size:14px;
+	padding:10px;
+}
+.menu li a:hover {
+	text-decoration:none;
+	color:#ffffff;
+	font-size:14px;
+	background:#ffa800;
+	padding:10px;
+}
+.menu #active a {
+	text-decoration:none;
+	color:#ffffff;
+	font-size:14px;
+	background:#ffa800;
+	padding:10px;
+}
+.box {
+	float:left;
+	width:290px;
+	padding:10px;
+	margin:20px 7px;
+	background:#dfe0e2;
+}
+.buttonBox {
+	background:#484848;
+	border:0;
+	font-weight:bold;
+	color:#FFFFFF;
+	padding:5px 10px;
+	cursor:pointer;
+}
+.box p {
+	padding:20px 0;
+}
+.boxButton {
+	float:right;
+}
+#mainContent {
+	background:#ffffff;
+	padding:20px 0;
+}
+.picRight {
+	float:right;
+	padding:0 0 15px 20px;
+} 
+#footer {
+	background:#dfe0e2;
+	color:#535353;
+	padding:15px 0; 
+}
+#footer p {
+	text-align:center;
+} 
+#footer a {
+	color:#6fbc18;
+	text-decoration:underline;
+}
+#footer a:hover {
+	color:#6fbc18;
+	text-decoration:none;
+}
+.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+
+.registerDiv{
+	
+	font-weight: bold;
+	font-size: 150%;
+}
+
+#button {
+width:130px;
+background: #3e9cbf; /*the colour of the button*/
+padding: 8px 14px 10px; /*apply some padding inside the button*/
+border:1px solid #3e9cbf; /*required or the default border for the browser will appear*/
+cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+/*style the text*/
+font-size:1.0em;
+font-family:Oswald, sans-serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
+letter-spacing:.1em;
+text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
+color: #fff;
+/*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
+-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+/*give the corners a small curve*/
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;	
+}
+
+/***SET THE BUTTON'S HOVER AND FOCUS STATES***/
+#button:hover, #button:focus {
+color:#dfe7ea;
+/*reduce the size of the shadow to give a pushed effect*/
+-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+}
+
+#cartbutton {
+width:170px;
+background: #3e9cbf; /*the colour of the button*/
+padding: 8px 14px 10px; /*apply some padding inside the button*/
+border:1px solid #3e9cbf; /*required or the default border for the browser will appear*/
+cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+/*style the text*/
+font-size:1.0em;
+font-family:Oswald, sans-serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
+letter-spacing:.1em;
+text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
+color: #fff;
+/*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
+-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+/*give the corners a small curve*/
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;	
+}
+
+/***SET THE BUTTON'S HOVER AND FOCUS STATES***/
+#cartbutton:hover, #cartbutton:focus {
+color:#dfe7ea;
+/*reduce the size of the shadow to give a pushed effect*/
+-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+}
+
+#cartbutton2 {
+width:100px;
+background: #3e9cbf; /*the colour of the button*/
+padding: 8px 14px 10px; /*apply some padding inside the button*/
+border:1px solid #3e9cbf; /*required or the default border for the browser will appear*/
+cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+/*style the text*/
+font-size:1.0em;
+font-family:Oswald, sans-serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
+letter-spacing:.1em;
+text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
+color: #fff;
+/*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
+-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+/*give the corners a small curve*/
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;	
+}
+
+/***SET THE BUTTON'S HOVER AND FOCUS STATES***/
+#cartbutton2:hover, #cartbutton2:focus {
+color:#dfe7ea;
+/*reduce the size of the shadow to give a pushed effect*/
+-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+}
+
+.divider{
+	width:100px;
+    height:auto;
+}
+
+#txtHint{
+	font-size: 140%;
+	color: red;
+}
+.session1{
+	font-size: 150%;
+	color:green;
+}
+#tfheader{
+		background-color:#c3dfef;
+	}
+	#tfnewsearch{
+		float:left;
+		padding:0px 0px 0px 20px;
+	}
+	.tftextinput{
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		border:1px solid #0076a3; border-right:0px;
+		border-top-left-radius: 5px 5px;
+		border-bottom-left-radius: 5px 5px;
+	}
+	.tfbutton {
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		outline: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		color: #ffffff;
+		border: solid 1px #0076a3; border-right:0px;
+		background: #0095cd;
+		background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+		background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+		border-top-right-radius: 5px 5px;
+		border-bottom-right-radius: 5px 5px;
+	}
+	.tfbutton:hover {
+		text-decoration: none;
+		background: #007ead;
+		background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+		background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	}
+	/* Fixes submit button height problem in Firefox */
+	.tfbutton::-moz-focus-inner {
+	  border: 0;
+	}
+	.tfclear{
+		clear:both;
+	}
+	#main {
+float:left;
+width:700px;
+padding:10px;
+
+}
+#sidebar {
+float:right;
+width:255px;
+height:700px;
+
+border:1px solid #0076a3;
+}
+#main2 {
+float:left;
+width:960px;
+padding:10px;
+background:#9c9;
+}
+
+.errorDiv{
+	display:inline;
+	color:Red;
+}
+
+.button {
+width:130px;
+background: #3e9cbf; /*the colour of the button*/
+padding: 8px 14px 10px; /*apply some padding inside the button*/
+border:1px solid #3e9cbf; /*required or the default border for the browser will appear*/
+cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+/*style the text*/
+font-size:1.0em;
+font-family:Oswald, sans-serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
+letter-spacing:.1em;
+text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
+color: #fff;
+/*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
+-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+/*give the corners a small curve*/
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;	
+}
+
+/***SET THE BUTTON'S HOVER AND FOCUS STATES***/
+.button:hover, .button:focus {
+color:#dfe7ea;
+/*reduce the size of the shadow to give a pushed effect*/
+-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+}

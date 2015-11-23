@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>geek Software Shop</title>
+	<meta name="author" content="santhosh" />
+	<!-- Date: 2015-04-11 -->
+		
+	<link href="styles.css" rel="stylesheet" type="text/css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#purchaseHistory').hide();
+			$.ajax({
+				url : "accountInfo.php", 
+        		type : "POST",
+        		data : {},
+				success : function(data){
+					console.log(data);
+					//debugger;
+					var arr = $.parseJSON(data);
+					
+						var arrInfo = arr[0];
+						document.getElementById("username").value = arrInfo.username;
+						document.getElementById("fname").value = arrInfo.fName;
+						document.getElementById("lname").value = arrInfo.lName;
+						document.getElementById("email").value = arrInfo.email;
+						document.getElementById("addressTextArea").value = arrInfo.address;
+						document.getElementById("state").value = arrInfo.state;
+						document.getElementById("city").value = arrInfo.city;
+						document.getElementById("zip").value = arrInfo.zip;
+						document.getElementById("phone").value = arrInfo.phone;
+						document.getElementById("hiddenId").value = arrInfo.id;
+						var purchase = arr[1];
+						if(purchase.length>0)
+						{
+							$('#tbodypurchase').empty();
+							$('#purchaseHistory').show();
+							
+							$(purchase).each(function(){
+								var row = "<tr><td>"+ this.orderId +"</td> <td>"+ this.name +"</td><td>"+this.company+"</td><td>"+ this.cost +"</td></tr>";
+								$('#tbodypurchase').append(row);
+							});
+						}
+					
+				}
+			});
+			
+			$('#updateButton').click(function(){
+				var username =document.getElementById("username").value;
+				var fname = document.getElementById("fname").value;
+				var lname = document.getElementById("lname").value;
+				var email = document.getElementById("email").value;
+				var address = document.getElementById("addressTextArea").value;
+				var state = document.getElementById("state").value;
+				var city = document.getElementById("city").value;
+				var zip = document.getElementById("zip").value;
+				var phone =	document.getElementById("phone").value;
+				var id = document.getElementById("hiddenId").value;
+        			$.ajax({url : "accUpdate.php", 
+        					type : "POST",
+        				    data : {'id':id,'user':username,'fname':fname,'lname':lname,'email':email,'address':address,'state':state,'city':city,'zip':zip,'phone':phone}, 
+        				    success:function (data) {
+        				    	alert("Update Successful");
+        				    	document.getElementById("username").value = arrInfo.username;
+								document.getElementById("fname").value = arrInfo.fName;
+								document.getElementById("lname").value = arrInfo.lName;
+								document.getElementById("email").value = arrInfo.email;
+								document.getElementById("addressTextArea").value = arrInfo.address;
+								document.getElementById("state").value = arrInfo.state;
+								document.getElementById("city").value = arrInfo.city;
+								document.getElementById("zip").value = arrInfo.zip;
+								document.getElementById("phone").value = arrInfo.phone;
+						
+    			}});
+    			
+    			//$('#category').val(('#category option:first').val());
+    			
+    			});
+		});	
+	</script>
+</head>
+<body>
+<!-- begin #container -->
+<div id="container">
+	<!-- begin #header -->
+    <div id="header">
+    	<div class="logo" align="left"><a href=""> <img src="images/logo.png" alt="" /></a></div>
+    	<div class="session1" align="right" ><p>Hello User &nbsp;&nbsp;<a href="logout.php">Logout</a></p> </div>
+    	<div class="changePassword" align="right"><p> <a href="changePassword.html">(Change Password)</a> </p></div>
+    	
+    	&nbsp;
+    	&nbsp;
+        <div class="menuContainer">
+            <div class="menu">
+                <ul>
+                    <li><a href="loggedIn.html">HOME</a></li>
+                     <!--<li><a href="login.html">LOGIN</a></li>-->
+                    <li id="active"><a href="account_page.html">USER ACCOUNT</a></li>
+                    <li ><a href="cart.php">MY CART</a></li>
+                    <li><a href="services.html">SERVICES</a></li>                    
+                    <li><a href="location.html">LOCATION</a></li>
+                </ul>
+            </div>
+                <ul class="icons">
+                    <li><a href=""><img src="images/twitter.png" alt="" /></a></li>
+                    <li><a href=""><img src="images/facebook.png" alt="" /></a></li>
+                    <li><a href=""><img src="images/flickr.png" alt="" /></a></li>
+                    <li><a href=""><img src="images/stumble.png" alt="" /></a></li>
+                </ul>
+            <div class="clearfloat"> </div>
+        </div>
+        <div class="clearfloat"> </div>
+        
+        
+        <div class="loginDiv" align="center">
+        	<form name="register" action="accountInfo.php" method="post">
+        		
+        		<table cellspacing="30">
+        			<tr>	
+        				<td>
+        					Username:
+        				</td>
+        				<td>
+        					<input type="text" id="username" name="username"  > <div id="usernameError"> </div>
+        				</td>
+        				
+        			</tr>
+        			        			
+        			<tr>
+        				<td>
+        					First Name:
+        				</td>
+        				<td>
+        					<input type="text"  name="firstName" id="fname" >
+        				</td>
+        				
+        			</tr>
+        			<tr>
+        				<td>
+        					Last Name:
+        				</td>
+        				<td>
+        					<input type="text" name="lastName" id="lname">
+        				</td>
+        			</tr>
+        			<tr>
+        				<td>
+        					Email Id:
+        				</td>
+        				<td>
+        					<input type="email" name="emailId" id="email" >
+        				</td>
+        			</tr>
+        			
+        			<tr>
+        				<td>
+        					Address :
+        				</td>
+        				<td>
+        					<!--<input type="text" name="addressLine1" style="height:50px" >-->
+        					<textarea name="address" id="addressTextArea" style="height: 50px;width: 100%"> </textarea>
+        						
+        				
+        				</td>
+        			</tr>
+        			<tr>
+        				<td>
+        					State:
+        				</td>
+        				<td>
+        					<input type="text" name="state" id="state" >
+        				</td>
+        			</tr>
+        			<tr>
+        				<td>
+        					City:
+        				</td>
+        				<td>
+        					<input type="text" name="city" id="city" >
+        				</td>
+        			</tr>
+        			<tr>
+        				<td>
+        					Zipcode:
+        				</td>
+        				<td>
+        					<input type="text" name="zipcode" id="zip" >
+        				</td>
+        			</tr>
+        			<tr>
+        				<td>
+        					Phone:
+        				</td>
+        				<td>
+        					<input type="text" name="phone" id="phone">
+        				</td>
+        			</tr>
+        			
+        		</table>
+        		<input type="hidden" id="hiddenId" value="" />
+        				<div id="updatePanel" align="center"><input type="button" name="update" value="update" id="updateButton"/> </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	        			<!--<input type="reset" value="RESET" id="button"/></td>-->
+	        	        		
+        	</form>
+        	<div id="purchaseHistory" >
+        		<table id="purchaseTable">
+        			<thead>
+        				<th>Order ID</th>
+        				<th>Product Name</th>
+        				<th>Company</th>
+        				<th>Cost</th>
+        			</thead>
+        			<tbody id="tbodypurchase">
+        				
+        			</tbody>
+        		</table>
+        	</div>
+        </div>
+        
+    </div> 
+    
+   
+    <!-- end #header -->
+    
+    
+    <!-- end #mainContent -->
+    <!-- This clearing element should immediately follow the #mainContent div in order to/ force the #container div to contain all child floats --><br class="clearfloat" />
+    <!-- begin #footer -->
+    <div id="footer">
+		<p>
+        	Terms of Use | <a title="This page validates as XHTML 1.0 Strict" href="http://validator.w3.org/check/referer" class="footerLink"><abbr title="eXtensible HyperText Markup Language">XHTML</abbr></a> | 
+			Designed by Sankar, Santhosh and Rukmini            
+        </p>
+	</div>
+    <!-- end #footer -->
+</div>
+<!-- end #container -->
+</body>
+
+</html>

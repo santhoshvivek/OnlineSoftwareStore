@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>geek Software Shop</title>
+<link href="styles.css" rel="stylesheet" type="text/css" />
+<!--<script src="slideshow.js"></script>-->
+<script type="text/javascript">
+var slideimages = new Array() // create new array to preload images
+slideimages[0] = new Image() // create new instance of image object
+slideimages[0].src = "images/newimage-3.jpg" // set image src property to image path, preloading image in the process
+slideimages[1] = new Image()
+slideimages[1].src = "images/newimage-1.jpg" 
+slideimages[2] = new Image()
+slideimages[2].src = "images/newimage-2.jpg" 
+slideimages[3] = new Image()
+slideimages[3].src = "images/newimage-6.jpg" 
+slideimages[4] = new Image()
+slideimages[4].src = "images/newimage-4.jpg" 
+	
+</script>
+</head>
+<body>
+<!-- begin #container -->
+<div id="container">
+	<!-- begin #header -->
+    <div id="header">
+    	<div class="logo" align="left"><a href=""><img src="images/logo.png" alt=""/></a></div>
+        <div class="menuContainer">
+            <div class="menu">
+                <ul>
+                    <li id="active"><a href="">HOME</a></li>
+                     <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="location.html">LOCATION</a></li>
+                </ul>
+            </div>
+                <ul class="icons">
+                    <li><a href=""><img src="images/twitter.png" alt="" /></a></li>
+                    <li><a href=""><img src="images/facebook.png" alt="" /></a></li>
+                    <li><a href=""><img src="images/flickr.png" alt="" /></a></li>
+                    <li><a href=""><img src="images/stumble.png" alt="" /></a></li>
+                </ul>
+            <div class="clearfloat"></div>
+        </div>
+        <div class="clearfloat"></div>
+        <div class="headerPic">
+        	<img src="images/headepic-1.jpg" id="slide" width="100%" height="100%" />
+        	<!--<div class="headerText1">Gateway</div>-->
+            <!--<div class="headerText2">E-155C is a Thin &#38; Light<br />Convertible notebook</div>-->
+            <!--<div><input type="button" value="SHOP TODAY!" class="buttonHeader" /></div>-->
+        </div>
+    </div>
+    <!-- end #header -->
+     <div>
+    	
+    	<div class="box">
+            <img src="images/software-2.jpg" alt="" width="90%" />
+            <p>
+            	<b> Application software Packages</b>
+            </p>
+            <div class="boxButton"><a href="appsoftware.php"><input type="submit" id= "app" value="Browse products" class="buttonBox" /></a></div>
+           
+        </div>
+        <div class="box">
+            <img src="images/software-1.jpg" alt="" width="94%"/>
+            <p>
+            	<b> System software </b>
+            </p>
+            
+            <div class="boxButton"><a href="systemsoftware.php"><input type="submit" id= "sys" value="Browse products" class="buttonBox"  /></a></div>
+            
+        </div>
+        <div class="box">
+            <img src="images/software-4.jpg" alt="" width="90%"/>
+            <p>
+            	<b>Development software packages</b>
+            </p>
+            <div class="boxButton"><a href="devsoftware.php"><input type="submit" id="dev" value="Browse products" class="buttonBox"  /></a></div>
+            
+        </div>	
+        <input type="hidden" name="query" id="hiddenquery" value="">
+     
+    </div>
+    <!-- begin #mainContent -->
+    <div id="mainContent">
+    	
+        
+        <div class="clearfloat"></div>
+    </div>
+    <!-- end #mainContent -->
+    <!-- This clearing element should immediately follow the #mainContent div in order to force the #container div to contain all child floats --><br class="clearfloat" />
+    <!-- begin #footer -->
+    <div id="footer">
+		<p>
+        	Terms of Use | <a title="This page validates as XHTML 1.0 Strict" href="http://validator.w3.org/check/referer" class="footerLink"><abbr title="eXtensible HyperText Markup Language">XHTML</abbr></a> | 
+			Designed by Sankar, Santhosh and Rukmini            
+        </p>
+	</div>
+    <!-- end #footer -->
+</div>
+<!-- end #container -->
+<script type="text/javascript"> 
+
+//variable that will increment through the images
+var step=0
+
+function slideit(){
+ //if browser does not support the image object, exit.
+ if (!document.images)
+  return
+ document.getElementById('slide').src = slideimages[step].src
+ if (step<4)
+  step++
+ else
+  step=0
+ //call function "slideit()" every 2.5 seconds
+ setTimeout("slideit()",2500)
+}
+slideit()
+	
+	
+	
+</script></body>
+</html>

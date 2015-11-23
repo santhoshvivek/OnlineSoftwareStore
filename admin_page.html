@@ -1,0 +1,154 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Admin Page</title>
+		<meta name="author" content="santhosh" />
+		<!-- Date: 2015-04-11 -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+    			$('#addButton').click(function(){
+        			var clickBtnValue = $(this).val();
+        			var url = 'admin.php';
+        			var id = document.getElementById("prodId").value;
+        			var name = document.getElementById("prodName").value;
+        			var desc = document.getElementById("prodDescription").value;
+        			var company = document.getElementById("company").value;
+        			var price = document.getElementById("prodPrice").value;
+        			var category = document.getElementById("category").value;
+        			var date = document.getElementById("releaseDate").value;
+        			$.ajax({url : "admin.php", 
+        					type : "POST",
+        				    data : {'action': clickBtnValue , 'prodId':id , 'prodName' : name, 'prodDescription' : desc ,'company' :company,'prodPrice':price,'category':category,'date':date}, 
+        				    success:function (data) {
+        				    	alert("Insert Successful");
+        				    	window.location.reload();
+    			}});
+    			
+    			        			
+    			});
+    			$('#deleteButton').click(function(){
+        			var clickBtnValue = $(this).val();
+        			var url = 'admin.php';
+        			var id = document.getElementById("prodId").value;
+        			var name = document.getElementById("prodName").value;
+        			var desc = document.getElementById("prodDescription").value;
+        			var company = document.getElementById("company").value;
+        			var price = document.getElementById("prodPrice").value;
+        			var category = document.getElementById("category").value;
+        			var date = document.getElementById("releaseDate").value;
+        			$.ajax({url : "admin.php", 
+        					type : "POST",
+        				    data : {'action': clickBtnValue , 'prodId':id , 'prodName' : name, 'prodDescription' : desc ,'company' :company,'prodPrice':price,'category':category,'date':date}, 
+        				    success:function (data) {
+        				    	alert("Delete Successful");
+        				    	window.location.reload();        				    	
+    			}});
+    			
+    			
+    			});
+    			$('#updateButton').click(function(){
+        			var clickBtnValue = $(this).val();
+        			var url = 'admin.php';
+        			var id = document.getElementById("prodId").value;
+        			var name = document.getElementById("prodName").value;
+        			var desc = document.getElementById("prodDescription").value;
+        			var company = document.getElementById("company").value;
+        			var price = document.getElementById("prodPrice").value;
+        			var category = document.getElementById("category").value;
+        			var date = document.getElementById("releaseDate").value;
+        			$.ajax({url : "admin.php", 
+        					type : "POST",
+        				    data : {'action': clickBtnValue , 'prodId':id , 'prodName' : name, 'prodDescription' : desc ,'company' :company,'prodPrice':price,'category':category,'date':date}, 
+        				    success:function (data) {
+        				    	alert("Update Successful");
+        				    	window.location.reload();
+        				   }});
+    			
+    			});
+    			
+    			$('#findButton').click(function(){
+    				var clickBtnValue = $(this).val();
+    				var url = 'admin.php';
+        			var id = document.getElementById("prodId").value;
+        			$.ajax({url : "admin.php", 
+        					type : "POST",
+        				    data : {'action': clickBtnValue, 'prodId' : id}, 
+        				    success:function (data) {
+        				    	
+            			console.log(data);
+            			var arr = $.parseJSON(data);
+            			var name = arr.productName;
+            			document.getElementById("prodName").value = name;
+            			document.getElementById("prodDescription").value = arr.description;
+            			document.getElementById("company").value = arr.company;
+            			document.getElementById("prodPrice").value = arr.price;
+            			var imageLink =  arr.link;
+            			document.getElementById("releaseDate").value=arr.releaseDate;
+        			    document.getElementById("category").value=arr.category;
+    			}});
+			});
+			});
+		</script>
+		<link href="styles.css" rel="stylesheet" type="text/css" />
+
+	</head>
+	<body>
+		<div id="header">
+				<div class="logo" align="center">
+					<a href=""><img src="images/logo.png" alt="" /></a>
+				</div>
+				
+		</div>
+		<div id="admin" align="center">
+			<form id="Db">
+				<table id="adminForm">
+					<tr>
+						<td>Product ID</td>
+						<td><input type="text" id="prodId" /></td>
+					</tr>					
+					<tr>
+						<td>Product Name</td>
+						<td><input type="text" id="prodName" /></td>
+					</tr>
+					<tr>
+						<td>Category</td>
+						<td>
+					<select name="category" id="category" >
+						<option value="">--</option>
+  						<option value="app">Application Software</option>
+  						<option value="sys">System Software</option>
+  						<option value="dev">Development Software</option>
+  					</select>
+				</td>
+					</tr>
+					<tr>
+						<td>Product Description</td>
+						<td><input type="text" id="prodDescription" /></td>
+					</tr>
+					<tr>
+						<td>Company</td>
+						<td><input type="text" id="company" /></td>
+					</tr>
+					<tr>
+						<td>Product Price</td>
+						<td><input type="text" id="prodPrice"/></td>
+					</tr>
+					<tr>
+						<td>Release Date</td>
+						<td><input type="text" id="releaseDate" /></td>
+					</tr>
+										
+				</table>
+				<br /> <br /><br />
+				<input type="button" name="addSw" value="ADD" id="addButton" class="button"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="button" name="findSw" value="FIND" id="findButton" class="button"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="button" name="updateSw" value="UPDATE" id="updateButton" class="button"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="button"  name="deleteSw" value="DELETE" id="deleteButton" class="button"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	        	<input type="reset" value="RESET" id="button33" class="button"/>
+	        	
+			</form>
+		</div>
+
+	</body>
+</html>
